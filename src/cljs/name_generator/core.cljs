@@ -133,8 +133,8 @@
     [:p
       "This is a name generator. There are many like it, but this one is mine."]
     [:p.name @cool-name]
-    [:input.button
-     {:align "middle" type "button" :value "Generate" :on-click #(swap! cool-name generate-name)}]
+    [:button {:align "middle" type "button" :value "Generate" :on-click #(swap! cool-name generate-name)}
+      "Generate"]
     [social-footer true]
     ])
 
