@@ -113,18 +113,30 @@
 ;; Components
 
 (defn home-component [content]
-
   [:div.homme-container [content]])
 
 
+(defn social-footer [about]
+  [:div.footer
+   [:div.footer-inner
+   [:a {:href "https://twitter.com/7idiego"} [:div.icon.icon--twitter]]
+   [:a {:href "https://github.com/fidiego/name-generator"} [:div.icon.icon--github]]
+   (if about
+    [:a {:href "/about"} "About"])
+   ]
+   ])
+
+
 (defn name-generator []
-  [:div.name-generator.text-center
+  [:div.text-center
     [:h1 "Name Generator"]
     [:p
       "This is a name generator. There are many like it, but this one is mine."]
     [:p.name @cool-name]
     [:input.button
-     {:align "middle" type "button" :value "Generate" :on-click #(swap! cool-name generate-name)}]])
+     {:align "middle" type "button" :value "Generate" :on-click #(swap! cool-name generate-name)}]
+    [social-footer true]
+    ])
 
 ;; -------------------------
 ;; Views
@@ -133,8 +145,17 @@
   [home-component name-generator])
 
 (defn about-page []
-  [:div [:h2 "About name-generator"]
-   [:div [:a {:href "/"} "go to the home page"]]])
+  [:div
+   [:h2.text-center "About This Thing"]
+   [:div {:style {:maxWidth 400 :margin "0 auto" :textAlign "justify"}}
+    [:p "I just needed an excuse to mess around with clojurescript.
+      This could have easily been achieved with vanilla js, but where's the 'fun' in that?
+      Also, who doesn't like lisps?"
+    ]
+    [:p "The real reason, tough, is that I tried this with elm but the fact I'd need to use
+      a generator for the random numbers really killed my vibe."]]
+   [:div.text-center [:a {:href "/"} "go back to the thing"]]
+   [social-footer]])
 
 (defn current-page []
   [:div [(session/get :current-page)]])
