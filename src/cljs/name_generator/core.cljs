@@ -25,6 +25,7 @@
     "blue"
     "bold"
     "broken"
+    "bucolic"
     "delicate"
     "dichotomous"
     "divine"
