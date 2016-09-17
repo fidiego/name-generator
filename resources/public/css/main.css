@@ -1,0 +1,43 @@
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #F5CFD7;
+}
+
+.home-compenent {
+    width 100vw;
+    height: 100vh;
+    padding: 1em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.name-generator {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    padding: 15px;
+    min-height: 280px;
+    font-family: sans-serif;
+}
+
+.button {
+    font-size: 1.25em;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+hr {
+    margin: 15px;
+}
+
+.name {
+    height: 30px;
+    font-size: 2em;
+}

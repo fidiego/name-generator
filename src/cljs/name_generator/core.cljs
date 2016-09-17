@@ -114,19 +114,17 @@
 
 (defn home-component [content]
 
-  [:div.clearfix.xs-p1.md-mt2.xs-mt1.xs-border.container [content]])
+  [:div.homme-container [content]])
 
 
 (defn name-generator []
-  [:div.col.xs-col-12.xs-text-center.xs-p1
-    [:div.xs-text-1 "Name Generator"]
-    [:div.xs-m1
+  [:div.name-generator.text-center
+    [:h1 "Name Generator"]
+    [:p
       "This is a name generator. There are many like it, but this one is mine."]
-    [:hr.xs-m2]
-    [:input.button.input--centered
-     {:align "middle" type "button" :value "Generate" :on-click #(swap! cool-name generate-name)}]
-    [:div.xs-p2.xs-text-2 @cool-name]
-    ])
+    [:p.name @cool-name]
+    [:input.button
+     {:align "middle" type "button" :value "Generate" :on-click #(swap! cool-name generate-name)}]])
 
 ;; -------------------------
 ;; Views
