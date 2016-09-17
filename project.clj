@@ -44,7 +44,7 @@
 
   :minify-assets
   {:assets
-   {"resources/public/css/site.min.css" "resources/public/css/site.css"}}
+   {"resources/public/css/solid.min.css"}}
 
   :cljsbuild
   {:builds {:min
