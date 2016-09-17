@@ -50,6 +50,7 @@
     "proverbial"
     "prudent"
     "quiet"
+    "recalcitrant"
     "restless"
     "sacrosanct"
     "sanctimonious"
