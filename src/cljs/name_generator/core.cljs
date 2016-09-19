@@ -21,8 +21,6 @@
     "autumn"
     "billowing"
     "bitter"
-    "black"
-    "blue"
     "bold"
     "broken"
     "bucolic"
